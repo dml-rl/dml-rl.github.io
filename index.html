@@ -182,19 +182,20 @@
 
   <section class="hero teaser">
     <div class="container is-max-desktop">
+      <h2 class="title is-3">Motivation</h2>
       <div class="hero-body">
         <!-- <video id="teaser" autoplay muted loop playsinline height="100%">
         <source src=""
                 type="video/mp4">
       </video> -->
 
-        <img src="figures/abstraction.jpg" />
+        <!-- <img src="figures/abstraction.jpg" /> -->
+        <div style="text-align: center;">
+          <img src="figures/abstraction.jpg" alt="Abstraction Image" />
+        </div>
 
         <h2 class="subtitle has-text-centered">
-            We introduce OpenVLA, a 7B parameter open-source vision-language-action model (VLA), pretrained on 970k robot episodes from the Open X-Embodiment dataset. 
-            OpenVLA sets a new state of the art for generalist robot manipulation policies. It supports controlling multiple robots out of the box and 
-            can be quickly adapted to new robot setups via parameter-efficient fine-tuning. The OpenVLA checkpoints and PyTorch training pipeline are fully open-source
-            and models can be downloaded and fine-tuned from HuggingFace.
+          <strong>Pablo Picasso's The Bull.</strong> By focusing on and exaggerating specific details, rather than trying to capture every detail realistically, artists can convey the core meaning or essence of the subject more powerfully.
         </h2>
       </div>
     </div>
@@ -214,13 +215,9 @@
         <div class="column is-full-width">
           <h2 class="title is-3">The OpenVLA Model</h2>
           <div class="content has-text-justified has-text-centered">
-            <img src="static/images/openvla_model.jpg" />
+            <img src="figures/dml.png" />
             <p>
-              We train OpenVLA by fine-tuning a pretrained <a href="https://arxiv.org/abs/2402.07865">Prismatic-7B VLM</a>. Our model consists of three key elements:
-              (1) a <strong>fused visual encoder</strong>, consisting of a SigLIP and a DinoV2 backbone, that maps image inputs to a number of ``image patch embeddings'', 
-              (2) a <strong>projector</strong> that takes the output embeddings of the visual encoder and maps them into the input space of a large language model, and 
-              (3) a Llama 2 7B <strong>language model backbone</strong> that predicts tokenized output actions. These tokens get decoded into continuous output actions that
-              can be directly executed on the robot.
+              DML technique can force agents to learn robust representations of noisy observations and enhance generalization performance.
             </p>
             <p>
               To train OpenVLA, we curate a dataset of 970k robot manipulation trajectories from the <a href="https://robotics-transformer-x.github.io/">Open X-Embodiment (OpenX) dataset</a>.
@@ -297,39 +294,19 @@
                 <h2 class="title is-3">Experiments</h2>
 
                 <h3 class="title is-4">Direct Evaluations on Multiple Robot Platforms</h3>
-                <img src="static/images/bridge_results.jpg" />
+                <img src="figures/test_return.png" />
                 <div class="content has-text-justified">
 
                   <table width="100%" align="center" border="0" cellspacing="0" cellpadding="0">
                     <tr>
                       <p>
-                        We evaluate OpenVLA's ability to control multiple robot platforms ``out-of-the-box'' across two setups: the WidowX setup 
-                        from Bridge V2 and the Google Robot from the RT-series of papers. Our results show that OpenVLA sets a new state of the art, 
-                        outperforming prior generalist policies RT-1-X and Octo. Notably, as a product of the added data diversity and new model
-                        components, it also outperforms RT-2-X, a 55B parameter closed VLA.
+                        Generalization performance from 500 levels in each environment. The mean and standard deviation are shown across 3 seeds.
                       </p>
-                    </tr>
-                    <tr>
-                      <td width="50%">
-                        <p>
-                          We test OpenVLA across a wide range of generalization tasks, such as 
-                          <strong>visual</strong> (unseen backgrounds, distractor objects, colors/appearances of objects); 
-                          <strong>motion</strong> (unseen object positions/orientations); 
-                          <strong>physical</strong> (unseen object sizes/shapes); 
-                          and <strong>semantic</strong> (unseen target objects, instructions, and concepts from the Internet) generalization. 
-                          Qualitatively, we find that both RT-2-X and OpenVLA exhibit markedly more robust behaviors than the other tested model, 
-                          such as approaching the correct object when distractor objects are present, properly orienting the robot's end-effector
-                          to align with the orientation of the target object, and even recovering from mistakes such as insecurely grasping objects
-                        </p>
-                      </td>
-                      <td width="50%">
-                        <img src="static/images/rt1_results.jpg">
-                      </td>
                     </tr>
                   </table>
                 </div>
 
-                <br>
+                <!-- <br>
                 <h3 class="title is-4">Data-Efficient Adaptation to New Robot Setups</h3>
                 
                 <div class="content has-text-justified">
@@ -357,7 +334,7 @@
                     </tr>
                   </table>
                   
-                </div>
+                </div> -->
                 
                 <br>
                 <h3 class="title is-4">Parameter-Efficient Fine-Tuning</h3>
@@ -379,24 +356,53 @@
               <br>
 
               <br>
-              <h3 class="title is-4">Sample OpenVLA Rollout Videos</h2>
+              <h3 class="title is-4">Experiment Videos for Comparisons</h2>
                 <div class="content has-text-justified">
                   <p>
                     Below are videos of the OpenVLA generalist policy demonstrating various robust behaviors. (Videos are sped up by 1.5x.)
                   </p>
                 </div>
-
-                <div class="content has-text-justified">
-                  <p>OpenVLA properly orients the robot's end-effector to align with the orientation of the target object before grasping it.</p>
-                </div>
                 <div class="columns is-vcentered interpolation-panel">
                   <div class="column has-text-centered">
                     <h5>Bigfish with PPO</h5>
-                    <img src="bigfish/bigfish_ppo.gif" alt="Bigfish with PPO" width="80%">
+                    <img src="bigfish/bigfish_ppo.gif" alt="Bigfish with PPO" width="95%">
                   </div>
                   <div class="column has-text-centered">
                     <h5>Bigfish with our DML-RL</h5>
-                    <img src="bigfish/bigfish_dml.gif" alt="Bigfish with our DML-RL" width="80%">
+                    <img src="bigfish/bigfish_dml.gif" alt="Bigfish with our DML-RL" width="95%">
+                  </div>
+                </div>
+                
+                <div class="columns is-vcentered interpolation-panel">
+                  <div class="column has-text-centered">
+                    <h5>Climber with PPO</h5>
+                    <img src="climber/climber_ppo.gif" alt="Climber with PPO" width="95%">
+                  </div>
+                  <div class="column has-text-centered">
+                    <h5>Climber with our DML-RL</h5>
+                    <img src="climber/climber_dml.gif" alt="Climber with our DML-RL" width="95%">
+                  </div>
+                </div>
+
+                div class="columns is-vcentered interpolation-panel">
+                  <div class="column has-text-centered">
+                    <h5>Coinrun with PPO</h5>
+                    <img src="coinrun/coinrun_ppo.gif" alt="Coinrun with PPO" width="95%">
+                  </div>
+                  <div class="column has-text-centered">
+                    <h5>Coinrun with our DML-RL</h5>
+                    <img src="coinrun/coinrun_dml.gif" alt="Coinrun with our DML-RL" width="95%">
+                  </div>
+                </div>
+
+                div class="columns is-vcentered interpolation-panel">
+                  <div class="column has-text-centered">
+                    <h5>Dodgeball with PPO</h5>
+                    <img src="dodgeball/dodgeball_ppo.gif" alt="Dodgeball with PPO" width="95%">
+                  </div>
+                  <div class="column has-text-centered">
+                    <h5>Dodgeball with our DML-RL</h5>
+                    <img src="dodgeball/dodgeball_ppo.gif" alt="Dodgeball with our DML-RL" width="95%">
                   </div>
                 </div>
                 
