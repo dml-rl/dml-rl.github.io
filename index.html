@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-BM130PWZB5"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-BM130PWZB5');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description" content="The Meta-Representation Hypothesis">
+  <meta name="keywords" content="Reinforcement Learning, DML">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Meta-Representation Hypothesis</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro" rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+  <link rel="stylesheet" href="./static/css/bootstrap.min.css">
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <script src="./static/js/ajax.googleapis.com_ajax_libs_jquery_3.5.1_jquery.min.js"></script>
+  <script src="./static/js/isInViewport.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./favicon.ico?">
+
+</head>
+
+<body>
+
+  <section class="hero">
+    <div class="hero-body no-bottom-padding">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column has-text-centered">
+            <h1 class="title is-1 publication-title">The Meta-Representation Hypothesis</h1>
+            <div class="is-size-5 publication-authors">
+              <span class="author-block">Anonymous Submission</span>
+            </div>
+            
+            
+            
+          </div>
+
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+    </div>
+    </div>
+  </section>
+
+
+  <section class="section" style="padding-bottom: 0">
+    <div class="container">
+      <!-- Abstract. -->
+       <!--Embed youtube video-->
+       <div id="video" class="columns is-centered has-text-centered">
+       <iframe width="100%" height="648" src="https://www.youtube.com/embed/cVoYI1gmv_E?autoplay=1&loop=1" allowfullscreen></iframe>
+       </div>
+       <br/>
+      <div class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds">
+          <h2 class="title is-2">Abstract</h2>
+          <div class="content has-text-justified">
+            <p>
+              Humans rely on high-level meta-representations
+              to engage in abstract reasoning. In complex cognitive tasks, these meta-representations help individuals abstract general rules from experience.
+              However, constructing such meta-representations
+              from high-dimensional observations remains a
+              longstanding challenge for reinforcement learning
+              agents. For instance, a well-trained agent often
+              fails to generalize to even minor variations of the
+              same task, such as changes in background color,
+              while humans can easily handle. In this paper,
+              we build a bridge between meta-representation
+              and generalization, showing that generalization
+              performance benefits from meta-representation
+              learning. We also hypothesize that deep mutual
+              learning (DML) among agents can help them converge to meta-representations. Empirical results
+              provide support for our theory and hypothesis.
+              Overall, this work provides a new perspective on
+              the generalization of deep reinforcement learning.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div id="method_figure" class="columns is-centered has-text-centered">
+        <div class="column is-two-thirds no-bottom-padding">
+          <!-- <video controls src="./camera-ready-video-v2-compressed.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 100%;"> -->
+            <img src="figures/dml.png" />
+            <p>
+              DML technique can force agents to learn robust representations of noisy observations and enhance generalization performance.
+            </p>
+        </div>
+      </div>
+    </div>
+
+    <!--/ Paper video. -->
+    <br />
+    <br />
+
+  </section>
+
+
+  <section class="section" style="align-items:center;">
+    <div class="container" style="width: 90%;">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">PPO vs PPO + DML-RL</h2>
+          <tr>
+            <td>
+              <h2 class="subtitle">
+                Our proposed DML-RL is a framework that adapts multiple state-of-the-arts RL methods to improve the generalizable ability. Here we compare PPO and PPO with DML-RL.
+              </h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <!-- <div class="row">
+                <div class="col">
+                    <p style="text-align: center;font-weight: bolder;font-size: 16pt;">SAPG</p>
+                </div>
+                <div class="col">
+                  <p style="text-align: center;font-weight: bolder;font-size: 16pt;">PPO</p>
+                </div>
+              </div> -->
+
+              <div class="row">
+                <h2 class="title">Bigfish</h2>
+                <div class="col video-col">
+                    <img src="bigfish/bigfish_ppo-min.gif" alt="PPO" width="100%" style="border-radius:10px;">
+                    <span style="text-align: center;"> PPO</span>
+                </div>
+                <div class="col video-col">
+                    <img src="bigfish/bigfish_dml-min.gif" alt="DML" width="100%" style="border-radius:10px;">
+                    <span> PPO with DML</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <h2 class="title">Bossfight</h2>
+                <div class="col video-col">
+                    <img src="bossfight/bossfight_ppo-min.gif" alt="PPO" width="100%" style="border-radius:10px;">
+                    <span style="text-align: center;"> PPO</span>
+                </div>
+                <div class="col video-col">
+                    <img src="bossfight/bossfight_dml-min.gif" alt="DML" width="100%" style="border-radius:10px;">
+                    <span> PPO with DML</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <h2 class="title">Coinrun</h2>
+                <div class="col video-col">
+                    <img src="coinrun/coinrun_ppo-min.gif" alt="PPO" width="100%" style="border-radius:10px;">
+                    <span style="text-align: center;"> PPO</span>
+                </div>
+                <div class="col video-col">
+                    <img src="coinrun/coinrun_dml-min.gif" alt="DML" width="100%" style="border-radius:10px;">
+                    <span> PPO with DML</span>
+                </div>
+              </div>
+
+              <div class="row">
+                <h2 class="title">Fruitbot</h2>
+                <div class="col video-col">
+                    <img src="fruitbot/fruitbot_ppo-min.gif" alt="PPO" width="100%" style="border-radius:10px;">
+                    <span style="text-align: center;"> PPO</span>
+                </div>
+                <div class="col video-col">
+                    <img src="fruitbot/fruitbot_dml-min.gif" alt="DML" width="100%" style="border-radius:10px;">
+                    <span> PPO with DML</span>
+                </div>
+              </div>
+              
+              <div class="row">
+                <h2 class="title">Starpilot</h2>
+                <div class="col video-col">
+                    <img src="starpilot/starpilot_ppo-min.gif" alt="PPO" width="100%" style="border-radius:10px;">
+                    <span style="text-align: center;"> PPO</span>
+                </div>
+                <div class="col video-col">
+                    <img src="starpilot/starpilot_dml-min.gif" alt="DML" width="100%" style="border-radius:10px;">
+                    <span> PPO with DML</span>
+                </div>
+              </div>
+              
+            </td>
+          </tr>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- <section class="section" style="align-items:center;">
+    <div class="container" style="width: 90%;">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">The Pipeline</h2>
+          <tr>
+            <td>
+              <h2 class="subtitle">
+                <br/>
+              </h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="row">
+                <img src="./resources/method.png" width="100%" style="border: 1px solid #bbb; border-radius: 10px; width: 100%; padding: 10px;">
+              </div>
+            </td>
+          </tr>
+        </div>
+      </div>
+    </div>
+  </section> -->
+  
+  
+  <section class="section" style="align-items:center;">
+    <div class="container" style="width: 90%;">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Quantitative Performance</h2>
+          <tr>
+            <td>
+              <h2 class="subtitle">
+                Our DML-RL framework help the standard RL methods improve the generalizable performance on a variety of challenging tasks. Results are from 500 levels in each environment. The mean and standard deviation are shown across 3 seeds.
+              </h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="row">
+                <img src="figures/test_return.png" width="100%" style="border-radius:10px;">
+              </div>
+              <br>
+              <!-- <div class="row">
+              <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/stepping_stones/long-2_compressed.MOV" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video playsinline autoplay loop muted src="./resources/stepping_stones/9_compressed.MOV" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div> -->
+            </td>
+          </tr>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  
+</body>
+
+<script>
+  var mainLoopId = setInterval(function () {
+    $('video').not('#teaser').each(function () {
+      if ($(this).is(":in-viewport")) {
+        $(this)[0].play();
+      } else {
+        $(this)[0].pause();
+      }
+    })
+  }, 200);
+</script>
+
+</html>
