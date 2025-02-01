@@ -241,11 +241,49 @@
             </div> -->
             </td>
           </tr>
+          
         </div>
       </div>
     </div>
   </section>
-
+  <section class="section" style="align-items:center;">
+    <div class="container" style="width: 90%;">
+      <div class="columns is-centered">
+        <div class="column is-full-width">
+          <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Robustness Evaluation through t-SNE</h2>
+          <tr>
+            <td>
+              <h2 class="subtitle">
+                To test the robustness of the trained policy, we obfuscate the agent's observations using convolutional layers randomly initialized
+with a standard Gaussian distribution. If the agent has indeed learned to ignore irrelevant features from noisy observations, it should
+exhibit better robustness to such obfuscations. Notably, the feature extraction of the PPO encoder enhanced by DML is highly stable and
+focused (red points), whereas the features extracted by the original PPO encoder are significantly dispersed (blue point).
+              </h2>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <div class="row">
+                <img src="figures/t-SNE.png" width="100%" style="border-radius:10px;">
+              </div>
+              <br>
+              <!-- <div class="row">
+              <div class="col">
+                  <video playsinline autoplay loop muted src="./resources/stepping_stones/long-2_compressed.MOV" width="100%"
+                         style="border-radius:10px; "></video>
+              </div>
+              <div class="col">
+                <video playsinline autoplay loop muted src="./resources/stepping_stones/9_compressed.MOV" width="100%"
+                       style="border-radius:10px; "></video>
+              </div>
+            </div> -->
+            </td>
+          </tr>
+          
+        </div>
+      </div>
+    </div>
+  </section>
   
 </body>
 
