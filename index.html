@@ -12,7 +12,7 @@
     gtag('config', 'G-BM130PWZB5');
   </script>
   <meta charset="utf-8">
-  <meta name="description" content="The Meta-Representation Hypothesis">
+  <meta name="description" content="Representation Convergence: Mutual Distillation is Secretly a Form of Regularization">
   <meta name="keywords" content="Reinforcement Learning, DML">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Representation Convergence: Mutual Distillation is Secretly a Form of Regularization</title>
@@ -46,7 +46,7 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">The Meta-Representation Hypothesis</h1>
+            <h1 class="title is-1 publication-title">Representation Convergence: Mutual Distillation is Secretly a Form of Regularization</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">Anonymous Submission</span>
             </div>
@@ -76,7 +76,7 @@
           <h2 class="title is-2">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              Humans rely on high-level understandings of things, i.e., meta-representations,  to engage in abstract reasoning. In complex cognitive tasks, these meta-representations help individuals abstract general rules from experience. However, constructing such meta-representations from high-dimensional observations remains a longstanding challenge for reinforcement learning (RL) agents. For instance, a well-trained agent often fails to generalize to even minor variations of the same task, such as changes in background color, while humans can easily handle. In this paper, we theoretically investigate how meta-representations contribute to the generalization ability of RL agents, demonstrating that learning meta-representations from high-dimensional observations enhances an agent's ability to generalize across varied environments. We further hypothesize that deep mutual learning (DML) among agents can help them learn the meta-representations that capture the underlying essence of the task. Empirical results provide strong support for both our theory and hypothesis. Overall, this work provides a new perspective on the generalization of deep reinforcement learning.
+              In this paper, we argue that mutual distillation between reinforcement learning policies serves as an \textit{implicit regularization}, preventing them from overfitting to irrelevant features. We highlight two key contributions: (a) Theoretically, for the first time, we prove that enhancing the policy robustness to irrelevant features leads to improved generalization performance. (b) Empirically, we demonstrate that mutual distillation between policies contributes to such robustness, enabling the spontaneous emergence of \textit{invariant representations} over pixel inputs. Overall, our findings challenge the conventional view of distillation as merely a means of knowledge transfer, offering a novel perspective on the generalization in deep reinforcement learning.
             </p>
           </div>
         </div>
@@ -133,47 +133,16 @@
                 </div>
               </div>
               
-              <div class="columns is-vcentered interpolation-panel" style="display: flex; flex-wrap: wrap;">
-                  <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Bossfight with PPO</strong></h5>
-                      <img src="bossfight/bossfight_ppo-min.gif" alt="Bossfight with PPO" style="width: 100%; max-width: 800px;">
-                  </div>
-                  <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Bossfight with our PPO + DML-RL</strong></h5>
-                      <img src="bossfight/bossfight_dml-min.gif" alt="Bossfight with our DML-RL" style="width: 100%; max-width: 800px;">
-                  </div>
-              </div>
+              
               
               <div class="columns is-vcentered interpolation-panel" style="display: flex; flex-wrap: wrap;">
                   <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Coinrun with PPO</strong></h5>
-                      <img src="coinrun/coinrun_ppo-min.gif" alt="Coinrun with PPO" style="width: 100%; max-width: 800px;">
-                  </div>
-                  <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Coinrun with our PPO + DML-RL</strong></h5>
-                      <img src="coinrun/coinrun_dml-min.gif" alt="Coinrun with our DML-RL" style="width: 100%; max-width: 800px;">
-                  </div>
-              </div>
-              
-              <div class="columns is-vcentered interpolation-panel" style="display: flex; flex-wrap: wrap;">
-                  <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Fruitbot with PPO</strong></h5>
-                      <img src="fruitbot/fruitbot_ppo-min.gif" alt="Fruitbot with PPO" style="width: 100%; max-width: 800px;">
-                  </div>
-                  <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Fruitbot with our PPO + DML-RL</strong></h5>
-                      <img src="fruitbot/fruitbot_dml-min.gif" alt="Fruitbot with our DML-RL" style="width: 100%; max-width: 800px;">
-                  </div>
-              </div>
-              
-              <div class="columns is-vcentered interpolation-panel" style="display: flex; flex-wrap: wrap;">
-                  <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Starpilot with PPO</strong></h5>
-                      <img src="starpilot/starpilot_ppo-min.gif" alt="Starpilot with PPO" style="width: 100%; max-width: 800px;">
+                      <h5><strong>PPO</strong></h5>
+                      <img src="bigfish/bigfish_kl_.gif" alt="Starpilot with PPO" style="width: 100%; max-width: 800px;">
                   </div>
                   <div class="column has-text-centered" style="flex: 1; padding: 10px;">
                       <h5><strong>Starpilot with our PPO + DML-RL</strong></h5>
-                      <img src="starpilot/starpilot_dml-min.gif" alt="Starpilot with our DML-RL" style="width: 100%; max-width: 800px;">
+                      <img src="bigfish/bigfish_kl_.gif" alt="Starpilot with our DML-RL" style="width: 100%; max-width: 800px;">
                   </div>
               </div>
             
