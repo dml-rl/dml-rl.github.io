@@ -46,7 +46,7 @@
       <div class="container">
         <div class="columns is-centered">
           <div class="column has-text-centered">
-            <h1 class="title is-1 publication-title">Representation Convergence: Mutual Distillation is Secretly a Form of Regularization</h1>
+            <h1 class="title is-1 publication-title">Representation Convergence:<br> Mutual Distillation is Secretly a Form of Regularization</h1>
             <div class="is-size-5 publication-authors">
               <span class="author-block">Anonymous Submission</span>
             </div>
@@ -76,7 +76,7 @@
           <h2 class="title is-2">Abstract</h2>
           <div class="content has-text-justified">
             <p>
-              In this paper, we argue that mutual distillation between reinforcement learning policies serves as an \textit{implicit regularization}, preventing them from overfitting to irrelevant features. We highlight two key contributions: (a) Theoretically, for the first time, we prove that enhancing the policy robustness to irrelevant features leads to improved generalization performance. (b) Empirically, we demonstrate that mutual distillation between policies contributes to such robustness, enabling the spontaneous emergence of \textit{invariant representations} over pixel inputs. Overall, our findings challenge the conventional view of distillation as merely a means of knowledge transfer, offering a novel perspective on the generalization in deep reinforcement learning.
+              In this paper, we argue that mutual distillation between reinforcement learning policies serves as an implicit regularization, preventing them from overfitting to irrelevant features. We highlight two key contributions: (a) Theoretically, for the first time, we prove that enhancing the policy robustness to irrelevant features leads to improved generalization performance. (b) Empirically, we demonstrate that mutual distillation between policies contributes to such robustness, enabling the spontaneous emergence of invariant representations over pixel inputs. Overall, our findings challenge the conventional view of distillation as merely a means of knowledge transfer, offering a novel perspective on the generalization in deep reinforcement learning.
             </p>
           </div>
         </div>
@@ -86,7 +86,7 @@
           <!-- <video controls src="./camera-ready-video-v2-compressed.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 100%;"> -->
             <img src="figures/dml.png" />
             <p>
-              DML technique can force agents to learn robust representations of noisy observations and enhance generalization performance.
+              DML can drive agents to learn robust representations of noisy observations and gradually reduce the divergence between them, ultimately improving generalization performance.
             </p>
         </div>
       </div>
@@ -106,9 +106,6 @@
           <h2 class="title is-2" style="text-align: center; padding-bottom: 10px;">Experiment Videos for Comparisons</h2>
           <tr>
             <td>
-              <h2 class="subtitle">
-                Our proposed DML-RL is a framework that adapts multiple state-of-the-arts RL methods to improve the generalizable ability. Here we compare PPO (Left) and PPO with DML-RL (Right).
-              </h2>
             </td>
           </tr>
           <tr>
@@ -137,12 +134,12 @@
               
               <div class="columns is-vcentered interpolation-panel" style="display: flex; flex-wrap: wrap;">
                   <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>PPO</strong></h5>
+                      <h5><strong>bigfish</strong></h5>
                       <img src="bigfish/bigfish_kl_.gif" alt="Starpilot with PPO" style="width: 100%; max-width: 800px;">
                   </div>
                   <div class="column has-text-centered" style="flex: 1; padding: 10px;">
-                      <h5><strong>Starpilot with our PPO + DML-RL</strong></h5>
-                      <img src="bigfish/bigfish_kl_.gif" alt="Starpilot with our DML-RL" style="width: 100%; max-width: 800px;">
+                      <h5><strong>fruitbot</strong></h5>
+                      <img src="bigfish/fruitbot_kl_.gif" alt="Starpilot with our DML-RL" style="width: 100%; max-width: 800px;">
                   </div>
               </div>
             
